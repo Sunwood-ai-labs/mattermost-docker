@@ -57,6 +57,12 @@ services:
       # additional settings
       - MM_SERVICESETTINGS_SITEURL
 
+      # WebSocket設定を追加
+      - MM_SERVICESETTINGS_SITEURL
+      - MM_SERVICESETTINGS_WEBSOCKETURL
+      - MM_SERVICESETTINGS_ALLOWCORSFROM
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
 # If you use rolling image tags and feel lucky watchtower can automatically pull new images and
 # instantiate containers from it. https://containrrr.dev/watchtower/
 # Please keep in mind watchtower will have access on the docker socket. This can be a security risk.
